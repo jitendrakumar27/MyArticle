@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsWatchApp</string>
+    <string name="logo_description" />
+    <string-array name="category_array">
+        <item>Politics</item>
+        <item>Technology</item>
+        <item>Sports</item>
+        <item>Entertainment</item>
+    </string-array>
+
+</resources>

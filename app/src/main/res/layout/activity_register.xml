@@ -1,0 +1,221 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/gradient_color">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logo_register"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:src="@drawable/news"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="10dp" />
+
+    <!-- Username EditText -->
+    <EditText
+        android:id="@+id/et_username_register"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColorHint="@color/Black"
+        android:inputType="text"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:backgroundTint="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/logo_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/et_email_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="@color/Black"
+        android:inputType="text"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:backgroundTint="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/et_username_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:textColorHint="@color/Black"
+        android:inputType="text"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:backgroundTint="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/et_email_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/et_password_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="@color/Black"
+        android:inputType="text"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:backgroundTint="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Role Selection (Media Reporter or Visitor) -->
+    <TextView
+        android:id="@+id/tv_select_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am a"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/et_password_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp" />
+
+    <!-- RadioGroup for Role Selection -->
+    <RadioGroup
+        android:id="@+id/rg_role"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <!-- Media Reporter Option -->
+        <RadioButton
+            android:id="@+id/rb_media_reporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media Reporter"
+            android:textColor="@color/Black"/>
+
+        <!-- Visitor Option -->
+        <RadioButton
+            android:id="@+id/rb_visitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visitor"
+            android:textColor="@color/Black"
+            android:layout_marginStart="30dp" />
+    </RadioGroup>
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="20dp"
+        android:backgroundTint="@color/DeepSkyBlue"
+        android:textColor="@android:color/black"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/rg_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/view_divider_register"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/Gray"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp" />
+
+    <!-- Or Sign Up With Text -->
+    <TextView
+        android:id="@+id/tv_or_sign_up_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or sign up with"
+        android:textColor="@color/Red"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+    <!-- Social Media Icons -->
+    <LinearLayout
+        android:id="@+id/ll_social_media_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_or_sign_up_with"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_google_register"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/google" />
+
+        <ImageView
+            android:id="@+id/iv_facebook_register"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/facebook"
+            android:layout_marginStart="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_twitter_register"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/twitter"
+            android:layout_marginStart="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_apple_register"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/linkedin"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

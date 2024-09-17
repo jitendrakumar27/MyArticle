@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".ArticlePostActivity">
+
+    <!-- Article Image -->
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="Article Image"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Upload Image Button -->
+    <Button
+        android:id="@+id/btn_upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        app:layout_constraintTop_toBottomOf="@id/article_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Article Heading -->
+    <EditText
+        android:id="@+id/et_article_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add Heading"
+        android:padding="12dp"
+        android:inputType="textCapWords"
+        android:textColorHint="@android:color/black"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/btn_upload_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Category Dropdown  autocompletetextview use karo spinner ki jagah pe  -->
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_article_heading" />
+
+    <!-- Tags Input -->
+    <EditText
+        android:id="@+id/et_article_tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add Tags (comma separated)"
+        android:padding="12dp"
+        android:inputType="text"
+        android:textColorHint="@android:color/black"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/spinner_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Video Link Input -->
+    <EditText
+        android:id="@+id/et_video_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add Video Link (Optional)"
+        android:padding="12dp"
+        android:inputType="textUri"
+        android:textColorHint="@android:color/black"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/et_article_tags"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Article Content (Multiline) -->
+    <EditText
+        android:id="@+id/et_article_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Write your article here..."
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:maxLines="10"
+        android:gravity="top"
+        android:padding="12dp"
+        android:textColorHint="@android:color/black"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/et_video_link"
+        app:layout_constraintBottom_toTopOf="@id/btn_post_article"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Post Article Button -->
+    <Button
+        android:id="@+id/btn_post_article"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/Blue"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

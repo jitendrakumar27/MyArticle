@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "599602305559",
+    "project_id": "newsapp-a974e",
+    "storage_bucket": "newsapp-a974e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599602305559:android:e09e619cc95feec5261a52",
+        "android_client_info": {
+          "package_name": "com.example.newswatchapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_p4S5uyg2uepRBIjeFPz6kkFN3ePF80Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

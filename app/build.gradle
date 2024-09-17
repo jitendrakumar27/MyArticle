@@ -1,0 +1,62 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id 'com.google.gms.google-services'  // Make sure this is here to apply the Google Services plugin
+}
+
+android {
+    namespace 'com.example.newswatchapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.newswatchapp"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    // AndroidX and other core libraries
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+
+    // RecyclerView and Material components
+    implementation libs.androidx.recyclerview
+    implementation libs.material.v190
+
+    // Firebase dependencies
+    implementation libs.firebase.bom  // Firebase BOM (Bill of Materials)
+    implementation libs.firebase.auth            // Firebase Authentication
+    implementation libs.firebase.database        // Firebase Realtime Database
+    implementation libs.firebase.firestore.ktx
+    implementation libs.firebase.storage.ktx
+    implementation libs.glide
+
+
+ 
+        implementation libs.androidx.activity.ktx // or latest version
+        implementation libs.androidx.fragment.ktx // or latest version
+
+
+}
